@@ -9,11 +9,10 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import Hero from '../components/hero.vue';
   import Banner from '../components/banner.vue';
   import BannerSubmit from '../components/bannerSubmit.vue';
   import CardList from '../components/cardList.vue';
+  import Hero from '../components/hero.vue';
 
   export default {
     name: 'home-page',

@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "card": {
+      "eyebrow": "What’s your opinion on",
+      "title": "Pope Francis?",
+      "body": "He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up)",
+      "cta": {
+        "label": "More information",
+        "url": "/"
+      },
+      "note": "What’s Your Verdict?"
+    },
+    "closing": {
+      "label": "Closing In",
+      "deadline": {
+        "number": 22,
+        "format": "days"
+      }
+    }
+  },
+  "votes": {
+    "title": "Votes",
+    "cards": {
+      "kaney-west": {
+        "id": "kaney-west",
+        "name": "Kanye West",
+        "time": "1 month ago in entertainment",
+        "content": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "image": "west.jpg",
+        "votes": {
+          "unit": "%",
+          "up": 50,
+          "down": 50
+        },
+        "isvoted": false
+      },
+      "mark-zuckerberg": {
+        "id": "mark-zuckerberg",
+        "name": "Mark Zuckerberg",
+        "time": "1 month ago in Business",
+        "content": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "image": "zuckerberg.jpg",
+        "votes": {
+          "unit": "%",
+          "up": 50,
+          "down": 50
+        },
+        "isvoted": true
+      },
+      "cristina-kirchner": {
+        "id": "cristina-kirchner",
+        "name": "Cristina Fernández de Kirchner",
+        "time": "1 month ago in Politics",
+        "content": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "image": "kirchner.jpg",
+        "votes": {
+          "unit": "%",
+          "up": 70,
+          "down": 30
+        },
+        "isvoted": true
+      },
+      "malala-yousafzai": {
+        "id": "malala-yousafzai",
+        "name": "Malala Yousafzai",
+        "time": "1 month ago in entertainment",
+        "content": "Vestibulum diam ante, porttitor a odio eget, rhoncus neque. Aenean eu velit libero.",
+        "image": "yousafzai.jpg",
+        "votes": {
+          "unit": "%",
+          "up": 30,
+          "down": 70
+        },
+        "isvoted": false
+      }
+    }
+  }
+}

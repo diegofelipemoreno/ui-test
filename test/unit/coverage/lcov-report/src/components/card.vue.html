@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/components/card.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/components</a> card.vue
+    </h1>
+    <div class='clearfix'>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;li class="card"&gt; 
+    &lt;div class="card__container grid"&gt;
+      &lt;div 
+        :class="'js-card-flag card__flag ' + [isUpVoteWinner ? '' : 'card__flag--down']"&gt;
+          &lt;img src="../assets/img/ok-icon.png"/&gt;
+      &lt;/div&gt;
+      &lt;div class="card__masthead"&gt;
+        &lt;h4 class="card__title"&gt;{{name}}&lt;/h4&gt;
+        &lt;p class="card__time"&gt;{{time}}&lt;/p&gt;
+        &lt;div class="card__body"&gt;
+          &lt;p v-if="!isvoted"&gt;{{content}}&lt;/p&gt;
+          &lt;p v-if="isvoted"&gt;Thank you for your voting!&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;button 
+        v-if="isvoted" 
+        @click="activeVoteAgain_"
+        class="card__vote-again cta-1"&gt;
+          Vote again
+      &lt;/button&gt;    
+      &lt;form 
+        v-if="!isvoted"
+        v-on:submit.prevent="setVote_"
+        class="card__vote-form"&gt;
+          &lt;div class="card__vote-box card__vote-box--up"&gt;
+            &lt;input 
+              :id="'up-' + id"
+              v-model="pickedVote"
+              class="card__vote-input" 
+              type="radio"
+              name="vote"
+              :value="up"
+              &gt;
+            &lt;img src="../assets/img/ok-icon.png"/&gt;
+            &lt;label class="sr-only" :for="'up-' + id"&gt;up&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="card__vote-box card__vote-box--down"&gt;
+            &lt;input 
+              :id="'down-' + id"
+              v-model="pickedVote"
+              class="card__vote-input"
+              name="vote" 
+              :value="down"
+              type="radio"
+              &gt;
+            &lt;img src="../assets/img/ok-icon.png"/&gt;
+            &lt;label class="sr-only" :for="'down-' + id"&gt;Down&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;button 
+            :disabled="!pickedVote"
+            type="submit" 
+            class="js-vote-now-cta card__vote-now cta-1"&gt;
+              Vote now
+          &lt;/button&gt;
+      &lt;/form&gt;
+&nbsp;
+      &lt;ul class="card__vote-info"&gt;
+        &lt;li class="js-up-bar"&gt;
+          &lt;img src="../assets/img/ok-icon.png"/&gt;
+          &lt;span class="card__percent"&gt;{{votes.up}}{{votes.unit}}&lt;/span&gt;
+        &lt;/li&gt;
+        &lt;li class="js-down-bar"&gt;
+          &lt;span class="card__percent"&gt;{{votes.down}}{{votes.unit}}&lt;/span&gt;
+          &lt;img src="../assets/img/ok-icon.png"/&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class="card__cover-box"&gt;
+      &lt;img class="card__cover-img" :src="'../assets/img/' + image"&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/template&gt;
+&nbsp;
+&lt;script&gt;
+<span class="cstat-no" title="statement not covered" >  import {CONSTANTS} from '../store/constants';</span>
+&nbsp;
+  export default {
+    name: 'card',
+    props: {
+      id: String,
+      name: String,
+      time: String,
+      content: String,
+      image: String,
+      votes: Object,
+      isvoted: Boolean
+    },
+<span class="fstat-no" title="function not covered" >    data() {</span>
+<span class="cstat-no" title="statement not covered" >      return {</span>
+        pickedVote: '',
+        up: CONSTANTS.UP,
+        down: CONSTANTS.DOWN,
+        upBar: null,
+        downBar: null
+      }
+    },
+<span class="fstat-no" title="function not covered" >    mounted() {</span>
+<span class="cstat-no" title="statement not covered" >      this.upBar = this.$el.querySelector('.js-up-bar'); </span>
+<span class="cstat-no" title="statement not covered" >      this.downBar = this.$el.querySelector('.js-down-bar'); </span>
+<span class="cstat-no" title="statement not covered" >      this.cardFlag = this.$el.querySelector('.js-card-flag'); </span>
+<span class="cstat-no" title="statement not covered" >      this.setVotesBars_();</span>
+    },
+    computed: {
+<span class="fstat-no" title="function not covered" >      isUpVoteWinner(votes) {</span>
+<span class="cstat-no" title="statement not covered" >        return this.$store.getters.isUpVoteWinnerGetter(votes);</span>
+      }
+    },
+    methods: {
+      /**
+       * Sets the vote up/down content dispatching an action.
+       * @param {!Event} event The submit event object.
+       * @private
+       */
+<span class="fstat-no" title="function not covered" >      setVote_(event) {</span>
+<span class="cstat-no" title="statement not covered" >        event.preventDefault();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        this.$store.dispatch('set_vote_action', </span>
+          { id: this.id,
+            pickedVote: this.pickedVote
+          }
+        );
+      },
+&nbsp;
+      /**
+       * Sets the up/down bars width accoriding the votes up/down data.
+       * @private
+       */
+<span class="fstat-no" title="function not covered" >      setVotesBars_() {</span>
+<span class="cstat-no" title="statement not covered" >        this.upBar.style.setProperty('--up',`${this.votes.up}%`);</span>
+<span class="cstat-no" title="statement not covered" >        this.downBar.style.setProperty('--down', `${this.votes.down}%`);</span>
+      },
+      
+      /**
+       * Actives the vote again dispatching an action.
+       * @param {!Event} event The submit event object.
+       * @private
+       */
+<span class="fstat-no" title="function not covered" >      activeVoteAgain_(event) {</span>
+<span class="cstat-no" title="statement not covered" >        this.$store.dispatch('active_vote_again', {id: this.id});</span>
+      }
+    }
+  }
+&lt;/script&gt;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Thu Nov 26 2020 00:49:24 GMT-0500 (Colombia Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

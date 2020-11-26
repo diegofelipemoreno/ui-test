@@ -6,8 +6,6 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-
   export default {
     name: 'how-it-works-page'
   }

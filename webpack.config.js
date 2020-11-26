@@ -73,10 +73,7 @@ module.exports = {
     port: configProject.portServer,
     compress: true,
     hot: true, // Enable Hot Module Replacement on the server
-    stats: 'errors-only',
-    historyApiFallback: {
-      index: 'dist/index.html',
-    },
+    stats: 'errors-only'
   },
   plugins: [
     new CopyWebpackPlugin(

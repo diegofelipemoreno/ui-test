@@ -63,6 +63,7 @@
     font-weight: 300;
     letter-spacing: 1px;
     margin-bottom: 10px;
+    min-height: 40px;
   }
 
   &__time {
@@ -194,6 +195,14 @@
     width: 25px;
     z-index: 1;
 
+    &--down {
+      background-color: $orange;
+
+      img {
+        transform: rotate(180deg);
+      }
+    }
+
     img {
       width: 25px;
     }
@@ -202,6 +211,15 @@
   &__percent {
     @include font-type($font-family-light, 30px, 32px);
     font-weight: 300;
+  }
+
+  &__vote-again {
+    grid-column: 2/4;
+    grid-row: form;
+    justify-self: center;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
   }
 
   @include large() {
@@ -243,11 +261,8 @@
 
     &__vote-again {
       grid-column: 2/12;
-      grid-row: form;
       justify-self: left;
       margin: 0 0 20px;
-      position: relative;
-      z-index: 1;
     }
   }
 }

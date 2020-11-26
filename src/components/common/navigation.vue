@@ -32,13 +32,7 @@
 </template>
 
 <script>
-  import Vue from 'vue';
-  import Navigation from './navigation.vue';
-
   export default {
-    name: 'navigation',
-    components: {
-      'navigation': Navigation
-    }
+    name: 'navigation'
   }
 </script>

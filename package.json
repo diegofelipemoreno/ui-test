@@ -12,12 +12,14 @@
     "build": "webpack --progress --hide-modules"
   },
   "dependencies": {
+    "jest-transform-stub": "^2.0.0",
     "style-loader": "^2.0.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.5.1"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.1.1",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",

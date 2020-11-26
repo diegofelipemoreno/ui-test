@@ -10,7 +10,6 @@
 </template>
 
 <script>
-  import Vue from 'vue';
   import Navigation from './navigation.vue';
 
   export default {

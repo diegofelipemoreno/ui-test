@@ -3,11 +3,13 @@
     <div class="hero__wrapper grid">
       <div class="hero__card">
         <div class="hero__masthead">
-          <h3 class="hero__eyebrow">What’s your opinion on</h3>
-          <h4 class="hero__title">Pope Francis?</h4>
-          <p class="hero__body">He’s talking tough on clergy sexual abuse, but is he just another papal pervert protector? (thumbs down) or a true pedophile punishing pontiff? (thumbs up) </p>
-          <a class="hero__anchor" href="/">More information</a>
-          <span class="hero__note">What’s Your Verdict?</span>
+          <h3 class="hero__eyebrow">{{ cardData.eyebrow }}</h3>
+          <h4 class="hero__title">{{ cardData.title }}</h4>
+          <p class="hero__body">{{ cardData.body }}</p>
+          <a class="hero__anchor" v-bind:href="cardData.cta.url">
+            {{ cardData.cta.label }}
+          </a>
+          <span class="hero__note">{{ cardData.note }}</span>
         </div>
 
         <form class="hero__vote-form">
@@ -21,8 +23,11 @@
       </div>
 
       <div class="hero__closing">
-        <span class="hero__closing-label">Closing In</span>
-        <span class="hero__closing-deadline">22 <span>days</span></span>
+        <span class="hero__closing-label">{{ closingData.label }}</span>
+        <span class="hero__closing-deadline">
+          {{ closingData.deadline.number }}
+          <span>{{ closingData.deadline.format }}</span>
+        </span>
       </div>
       <div class="hero__cover-box">
         <img class="hero__cover-img" src="../assets/img/papa.jpg">
@@ -32,10 +37,18 @@
 </template>
 
 <script>
-  import Vue from 'vue';
   import Card from './card.vue';
 
   export default {
-    name: 'hero'
+    name: 'hero',
+    computed: {
+      cardData() {
+  
+        return this.$store.getters.heroCardGetter
+      },
+      closingData() {
+        return this.$store.getters.heroClosingGetter
+      }
+    }
   }
-</script>+
+</script>

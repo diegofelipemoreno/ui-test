@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
+  testURL: 'http://localhost',
   moduleFileExtensions: [
     'js',
     'json',
@@ -23,5 +24,6 @@ module.exports = {
     '!src/main.js',
     '!src/router/index.js',
     '!**/node_modules/**'
-  ]
+  ],
+  transformIgnorePatterns: ["/node_modules/(?!vue-awesome)"]
 }

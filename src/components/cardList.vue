@@ -1,9 +1,9 @@
 <template>
   <section class="card-list">
-    <div class="card-list__wrapper grid">
+    <div v-if="votesCards.length" class="card-list__wrapper grid">
       <h2 class="card-list__title">{{ votesData.title }}</h2>
       <ul class="card-list__container">
-        <card    
+        <card   
           v-for="(card, index) in votesCards" :key="index"
           :id="card.id"
           :name="card.name"

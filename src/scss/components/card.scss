@@ -134,6 +134,8 @@
     justify-content: space-between;
     position: relative;
     z-index: 1;
+    --up: 50%;
+    --down: 50%;
 
     & > li {
       align-items: center;
@@ -147,7 +149,7 @@
       &:nth-child(even) {
         background-color: $orange;
         justify-content: flex-end;
-        width: 50%;
+        width: var(--down);
 
         img {
           transform: rotate(180deg);
@@ -157,7 +159,7 @@
       &:nth-child(odd) {
         background-color: $sky;
         justify-content: left;
-        width: 50%;
+        width: var(--up);
       }
 
       img {

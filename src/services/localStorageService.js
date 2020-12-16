@@ -1,67 +1,56 @@
-import {requestService} from './requestService';
-
-
 /**
  * Local Storage Service.
  */
-class LocalStorageService {
+export class LocalStorageService {
   /**
    * Local Storage constructor.
-   * @param {Window} global
+   * @param {!Object} data The value data to set the data on the localstorage.
    */
-  constructor(global) {
+  constructor(data) {
     /**
      * @private {!Object}
      */
-    this.model_ = requestService.getJson();
+    this.data_ = data;
 
     /**
      * @private {!Window}
      */
-    this.global_ = global;
-  }
-
-  /**
-   * Checks if the model content is setted on the window.localstorage;
-   * @private
-   */
-  isModelLocalStorage_() {
-    const isModelLocalStorage = this.global_.localStorage.model;
-
-    return isModelLocalStorage;
+    this.global_ = window;
   }
 
   /**
    * Sets state model data on the window localstorage.
    * @param {!Object} state The store state object.
+   * @param {string} key The key parameter to set the state data on 
+   *     the localstorage.
    * @public
    */
-  setState(state) {
+  setState(state, key) {
     let currentState = '';
 
     if(typeof(state) === 'object') {
       currentState = JSON.stringify(state) || '';
-      this.global_.localStorage.setItem('model', currentState);
+      this.global_.localStorage.setItem(key, currentState);
     }
   }
 
   /**
    * Gets the state data.
+   * @param {string} key The key parameter to set the state data on 
+   *     the localstorage.
    * @return {!Object}
    * @public
    */
-  getState() {
-    const isModelLocalStorage = this.isModelLocalStorage_();
-    let stringModelData = '';
-    let currentState = this.model_;
+  getState(key) {
+    const modelLocalStorage = this.global_.localStorage[key];
+    let currentState = this.data_;
 
-    if (isModelLocalStorage) {
-      stringModelData = this.global_.localStorage.getItem('model');
-      currentState = JSON.parse(stringModelData);
+    if (modelLocalStorage) {
+      currentState = JSON.parse(modelLocalStorage);
+    } else {
+      this.setState(currentState, key);
     }
 
     return currentState;
   }
 }
-
-export const localStorageService = new LocalStorageService(window);

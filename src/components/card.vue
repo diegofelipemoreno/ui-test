@@ -2,7 +2,7 @@
   <li class="card"> 
     <div class="card__container grid">
       <div 
-        :class="'js-card-flag card__flag ' + [isUpVoteWinner ? '' : 'card__flag--down']">
+        :class="setTypeVoteCssClassname">
           <img src="../assets/img/ok-icon.png"/>
       </div>
       <div class="card__masthead">
@@ -48,7 +48,6 @@
             <label class="sr-only" :for="'down-' + id">Down</label>
           </div>
           <button 
-            :disabled="!pickedVote"
             type="submit" 
             class="js-vote-now-cta card__vote-now cta-1">
               Vote now
@@ -56,11 +55,11 @@
       </form>
 
       <ul class="card__vote-info">
-        <li class="js-up-bar">
+        <li :style="`--up:${votes.up}%`">
           <img src="../assets/img/ok-icon.png"/>
           <span class="card__percent">{{votes.up}}{{votes.unit}}</span>
         </li>
-        <li class="js-down-bar">
+        <li :style="`--down:${votes.down}%`">
           <span class="card__percent">{{votes.down}}{{votes.unit}}</span>
           <img src="../assets/img/ok-icon.png"/>
         </li>
@@ -73,7 +72,7 @@
 </template>
 
 <script>
-  import {CONSTANTS} from '../store/constants';
+  import {CONSTANTS} from '../utils/constants';
 
   export default {
     name: 'card',
@@ -91,19 +90,23 @@
         pickedVote: '',
         up: CONSTANTS.UP,
         down: CONSTANTS.DOWN,
-        upBar: null,
-        downBar: null
       }
     },
-    mounted() {
-      this.upBar = this.$el.querySelector('.js-up-bar'); 
-      this.downBar = this.$el.querySelector('.js-down-bar'); 
-      this.cardFlag = this.$el.querySelector('.js-card-flag'); 
-      this.setVotesBars_();
-    },
     computed: {
+      setTypeVoteCssClassname() {
+        return `js-card-flag card__flag ${this.isUpVoteWinner ? '' : 'card__flag--down'}`;
+      },
       isUpVoteWinner(votes) {
         return this.$store.getters.isUpVoteWinnerGetter(votes);
+      },
+      isCardVoted(votes) {
+        return this.$store.getters.isCardVotedGetter(votes);
+      }
+    },
+    watch: {
+      isCardVoted(newValue, oldValue) {
+        this.$store.dispatch(
+          'save_state_on_localstorage_action', CONSTANTS.MODEL_KEY);
       }
     },
     methods: {
@@ -114,23 +117,15 @@
        */
       setVote_(event) {
         event.preventDefault();
+ 
+        if (this.pickedVote === CONSTANTS.DOWN) {
+          this.$store.dispatch('set_down_vote_action', { id: this.id });
+        }
 
-        this.$store.dispatch('set_vote_action', 
-          { id: this.id,
-            pickedVote: this.pickedVote
-          }
-        );
+        if (this.pickedVote === CONSTANTS.UP) {
+          this.$store.dispatch('set_up_vote_action', { id: this.id });
+        }
       },
-
-      /**
-       * Sets the up/down bars width accoriding the votes up/down data.
-       * @private
-       */
-      setVotesBars_() {
-        this.upBar.style.setProperty('--up',`${this.votes.up}%`);
-        this.downBar.style.setProperty('--down', `${this.votes.down}%`);
-      },
-      
       /**
        * Actives the vote again dispatching an action.
        * @param {!Event} event The submit event object.

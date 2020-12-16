@@ -22,7 +22,11 @@ export const heroClosingGetter = (state) => {
  * @return {!Object}
  */
 export const heroCardGetter = (state) => {
-  return state.hero.card;
+  if (state.hero) {
+    return state.hero.card;
+  }
+
+  return {};
 };
 
 /**
@@ -40,7 +44,11 @@ export const votesDataGetter = (state) => {
  * @return {!Array}
  */
 export const votesCardsGetter = (state) => {
-  return Object.values(state.votes.cards);
+  if (state.votes) {
+    return Object.values(state.votes.cards);
+  }
+
+  return {};
 };
 
 /**
@@ -56,4 +64,13 @@ export const isUpVoteWinnerGetter = (state) => ({votes}) => {
   }
 
   return isUpWinner;
+};
+
+/**
+ * Gets the if the card is voted.
+ * @param {!Object} state The state object from the store.
+ * @return {boolean}
+ */
+export const isCardVotedGetter = (state) => ({isvoted}) => {
+  return isvoted;
 };

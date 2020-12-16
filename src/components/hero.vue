@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <div class="hero__wrapper grid">
+    <div v-if="cardData.cta" class="hero__wrapper grid">
       <div class="hero__card">
         <div class="hero__masthead">
           <h3 class="hero__eyebrow">{{ cardData.eyebrow }}</h3>

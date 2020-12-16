@@ -32,7 +32,7 @@
           "up": 50,
           "down": 50
         },
-        "isvoted": false
+        "isvoted": true
       },
       "mark-zuckerberg": {
         "id": "mark-zuckerberg",

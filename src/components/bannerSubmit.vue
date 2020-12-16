@@ -10,11 +10,6 @@
 
 <script>
   export default {
-    name: 'banner-submit',
-    data () {
-      return {
-        msg: 'Welcome to Your Vue.js App'
-      }
-    }
+    name: 'banner-submit'
   }
 </script>
